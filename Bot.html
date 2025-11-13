@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Chatbot</title>
+    <link rel="stylesheet" href="Bot.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/postprocessing@6.29.1/dist/postprocessing.min.js"></script>
+
+</head>
+<body>
+    <div id="lights" class="background-container"></div>
+
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                
+                <h1>ZeeTech Solutions</h1>
+                  
+        </div>
+    </div>
+
+    <div id="chatIcon" class="pulse">
+        <i class="fas fa-comments"></i>
+    </div>
+
+    <div id="chatbot">
+        <div id="chatHeader">
+            <div class="chat-title">
+                <i class="fas fa-robot"></i>
+                ZeeTech Assistant
+            </div>
+            <div class="chat-actions">
+                <button class="chat-action-btn" id="minimizeBtn">
+                    <i class="fas fa-minus"></i>
+                </button>
+                <button class="chat-action-btn" id="closeBtn">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        </div>
+
+        <div id="chatMessages">
+            <div class="msg bot">
+                Hello! I'm Zee, your virtual assistant from ZeeTech Solutions. How can I help you today?
+            </div>
+            <div class="msg bot">
+                I can tell you about our company, services, team, pricing, or connect you with our support team.
+            </div>
+        </div>
+
+       <div class="suggestions">
+    <div class="suggestion" onclick="insertSuggestion('Tell me about ZeeTech Solutions')">About Us</div>
+    <div class="suggestion" onclick="insertSuggestion('What services do you offer?')">Services</div>
+    <div class="suggestion" onclick="insertSuggestion('Who are your clients?')">Clients</div>
+    <div class="suggestion" onclick="insertSuggestion('Contact support')">Support</div>
+</div>
+
+        <div id="chatInput">
+            <input type="text" id="userInput" placeholder="Type your message here...">
+            <button onclick="sendMessage()">
+                <i class="fas fa-paper-plane"></i> Send
+            </button>
+        </div>
+    </div>
+
+    <script src="Perssent.js"></script>
+    <!-- <script src="Bot.js"></script>  -->
+</body>
+</html>
